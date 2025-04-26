@@ -1,447 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>HTML Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Project - Saurabh Shukla</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    header, section, footer {
+      width: 100%;
+    }
+    nav {
+      background-color: #f3971b;
+    }
+    nav table {
+      width: 85%;
+      margin: auto;
+    }
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 18px;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .home, .about, .services, .testimonial, .achievements, .contact {
+      padding: 50px 0;
+    }
+    .home {
+      background-color: #292929;
+      text-align: center;
+      color: white;
+    }
+    .about, .testimonial, .contact {
+      background-color: #292929;
+      color: white;
+    }
+    .services, .achievements {
+      background-color: #c2c0c3;
+      color: #292929;
+    }
+    hr {
+      width: 70px;
+      border: 2px solid;
+    }
+    .services img, .about img, .achievements img {
+      width: 90%;
+      border-radius: 10px;
+    }
+    .services td, .testimonial td {
+      vertical-align: top;
+    }
+    .testimonial h3 {
+      margin: 10px 0;
+    }
+    footer {
+      background-color: #353535;
+      color: #f3971b;
+      text-align: center;
+      padding: 30px 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    input[type="text"], textarea {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0;
+      background-color: #555;
+      color: white;
+      border: 1px solid #888;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #f3971b;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #292929;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #ffae42;
+    }
+  </style>
 </head>
+
 <body>
-    <!--Start Header-->
-    <table id="header" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#f3971b">
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <table cellpadding="15" cellspacing="0">
         <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <tr>
-                        <td>
-                            <font face="arial" color="#000000" size="5">
-                                <span class="fa fa-user-circle" aria-hidden="true"></span>
-                                Saurabh Shukla
-                            </font>
-                        </td>
-                        <td >
-                            &nbsp;
-                        </td>
-                        <td>
-                            <a href="#home"><font face="arial" color="#ffffff" size="4">Home</font></a>
-                        </td>
-                        <td>
-                            <a href="#about"><font face="arial" color="#ffffff" size="4">About</font></a>
-                        </td>
-                        <td>
-                            <a href="#services"><font face="arial" color="#ffffff" size="4">Services</font></a>
-                        </td>
-                        <td>
-                            <a href="#testimonial"><font face="arial" color="#ffffff" size="4">Testimonials</font></a>
-                        </td>
-                        <td>
-                            <a href="#achievements"><font face="arial" color="#ffffff" size="4">Achievements</font></a>
-                        </td>
-                        <td>
-                            <a href="#contact"><font face="arial" color="#ffffff" size="4">Contact</font></a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-
+          <td><span class="fa fa-user-circle"></span> <strong>Saurabh Shukla</strong></td>
+          <td align="right" colspan="7">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonial">Testimonials</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+          </td>
         </tr>
+      </table>
+    </nav>
+  </header>
 
+  <!-- Home -->
+  <section id="home" class="home">
+    <h3>Hi, I'm Saurabh Shukla</h3>
+    <h2 style="color: #f3971b;">Freelance Programmer</h2>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="about">
+    <table width="85%" align="center" cellpadding="15" cellspacing="0">
+      <tr>
+        <td colspan="2" align="center">
+          <h2 style="color: #f3971b;">About Me</h2>
+          <hr color="#f3971b">
+        </td>
+      </tr>
+      <tr>
+        <td width="40%">
+          <img src="images/me1.png" alt="Saurabh Shukla">
+        </td>
+        <td width="60%">
+          <h3>I am a passionate Programmer</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium ea consequuntur nemo fugiat consequatur a ducimus amet fugit cupiditate quos placeat perferendis maiores explicabo voluptates...</p>
+        </td>
+      </tr>
     </table>
-    <!--End Header-->
-    <!--Start Home-->
-    <table id="home" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#292929">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <h3>
-                                <font face="arial" color="#ffffff" size="6">
-                                     Hi, I'm Saurabh Shukla
-                                </font>
-                            </h3>
-                        
-                        <h2>
-                            <font face="arial" color="#f3971b" size="7">
-                                Freelance Programmer
-                           </font>
-                        </h2>
-                        </td>
-                    </tr>
-                </table>
-            </td>
+  </section>
 
-        </tr>
-
-
+  <!-- Services -->
+  <section id="services" class="services">
+    <table width="85%" align="center" cellpadding="15" cellspacing="0">
+      <tr>
+        <td colspan="3" align="center">
+          <h2>Services</h2>
+          <hr color="#292929">
+        </td>
+      </tr>
+      <tr>
+        <td><a href="service1.html"><img src="images/service1.png" alt="Service 1"></a></td>
+        <td><a href="service2.html"><img src="images/service2.png" alt="Service 2"></a></td>
+        <td><a href="service3.html"><img src="images/service3.png" alt="Service 3"></a></td>
+      </tr>
     </table>
-    <!--End Home-->
+  </section>
 
-    <!--Start About-->
-    <table id="about" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#292929">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <!-- Heading Start-->
-                    <tr>
-                        <td height="180" align="center" valign="middle" colspan="2">
-                                <font face="arial" color="#f3971b" size="6">
-                                     About Me
-                                </font>
-                                <hr width="70" color="#f3971b">
-                        
-                        </td>
-                    </tr>
-                    <!--Heading End-->
-                    <tr>
-                        <td width="40%">
-                            <img src="images/me1.png" alt="Saurabh Shukla"  width="90%">
-                        </td>
-                        <td width="60%">
-                            <font face="arial" color="#ffffff" size="4">
-                                <h2>
-                                    I am a passionate Programmer
-                                </h2>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora laudantium ea consequuntur nemo fugiat consequatur a ducimus amet fugit cupiditate quos placeat perferendis maiores explicabo voluptates similique nisi reiciendis, quas quis doloremque cumque, labore quo ipsum eligendi! Eius totam nemo facere nisi quas eaque corrupti voluptate esse dicta, voluptates quos odit qui eligendi est beatae impedit asperiores magnam! Eligendi officiis architecto aperiam, voluptatum iure optio debitis id nihil reprehenderit similique, esse incidunt blanditiis odio eos sequi perferendis non, repellat soluta qui asperiores! Dolorem temporibus rem aut quaerat quas fugiat reiciendis quam dicta, in a possimus est voluptates, ratione eaque amet.
-                            </font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-
-        </tr>
-
-
+  <!-- Testimonials -->
+  <section id="testimonial" class="testimonial">
+    <table width="85%" align="center" cellpadding="15" cellspacing="0">
+      <tr>
+        <td colspan="3" align="center">
+          <h2 style="color: #f3971b;">Testimonials</h2>
+          <hr color="#f3971b">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3 align="center">Akash Gupta</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias...</p>
+        </td>
+        <td>
+          <h3 align="center">Akash Gupta</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias...</p>
+        </td>
+        <td>
+          <h3 align="center">Akash Gupta</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias...</p>
+        </td>
+      </tr>
     </table>
-    <!--End About-->
+  </section>
 
-    <!--Start Services-->
-    <table id="services" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <!-- Heading Start-->
-                    <tr>
-                        <td height="180" align="center" valign="middle" colspan="3">
-                                <font face="arial" color="#292929" size="6">
-                                     Services
-                                </font>
-                                <hr width="70" color="#292929">
-                        
-                        </td>
-                    </tr>
-                    <!--Heading End-->
-                    <tr>
-                        <td width="33%">
-                            <a href="service1.html"><img src="images/service1.png" alt="Service1"  width="100%"></a>
-                        </td>
-                        <td width="33%">
-                            <a href="service2.html"><img src="images/service2.png" alt="Service1"  width="100%"></a>
-                        </td>
-                        <td width="33%">
-                            <a href="service3.html"><img src="images/service3.png" alt="Service1"  width="100%"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-
-        </tr>
-
-
+  <!-- Achievements -->
+  <section id="achievements" class="achievements">
+    <table width="85%" align="center" cellpadding="15" cellspacing="0">
+      <tr>
+        <td colspan="2" align="center">
+          <h2>Achievements</h2>
+          <hr color="#292929">
+        </td>
+      </tr>
+      <tr>
+        <td width="66%">
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </td>
+        <td>
+          <img src="images/Achievements.png" alt="Achievements">
+        </td>
+      </tr>
     </table>
-    <!--End Services-->
+  </section>
 
-    <!--Start Testimonial-->
-    <table id="testimonial" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#353535">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <!-- Heading Start-->
-                    <tr>
-                        <td height="180" align="center" valign="middle" colspan="3">
-                                <font face="arial" color="#f3971b" size="6">
-                                     Testimonial
-                                </font>
-                                <hr width="70" color="#f3971b">
-                        
-                        </td>
-                    </tr>
-                    <!--Heading End-->
-                    <tr>
-                        <td width="33%" valign="top">
-                            <font face="arial" color="#ffffff">
-                                <h3 align="center">Akash Gupta</h3>
-                            </font>
-                            <font face="arial" color="#c2c0c3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias, nemo ipsam voluptates hic animi minima earum sit accusamus minus!
-                            </font>
-                        </td>
-                        <td width="33%" valign="top">
-                            <font face="arial" color="#ffffff">
-                                <h3 align="center">Akash Gupta</h3>
-                            </font>
-                            <font face="arial" color="#c2c0c3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias, nemo ipsam voluptates hic animi minima earum sit accusamus minus!
-                            </font>
-                        </td>
-                        <td width="33%" valign="top">
-                            <font face="arial" color="#ffffff">
-                                <h3 align="center">Akash Gupta</h3>
-                            </font>
-                            <font face="arial" color="#c2c0c3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias, nemo ipsam voluptates hic animi minima earum sit accusamus minus!
-                            </font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-
-        </tr>
-
-
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <table width="85%" align="center" cellpadding="15" cellspacing="0">
+      <tr>
+        <td align="center">
+          <h2 style="color: #f3971b;">Contact</h2>
+          <hr color="#f3971b">
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="text" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Submit</button>
+          </form>
+        </td>
+      </tr>
     </table>
-    <!--End Testimonial-->
+  </section>
 
-    <!--Start Achievements-->
-    <table id="achievements" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <!-- Heading Start-->
-                    <tr>
-                        <td height="180" align="center" valign="middle" colspan="2">
-                                <font face="arial" color="#292929" size="6">
-                                     Achievements
-                                </font>
-                                <hr width="70" color="#292929">
-                        
-                        </td>
-                    </tr>
-                    <!--Heading End-->
-                    <tr>
-                        <td width="66%" valign="top">
-                           <font face="arial"color="#292929">
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sint nesciunt voluptates autem minima sed accusantium consequatur inventore nobis aspernatur?</li>
-                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, non.</li>
-                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis excepturi ullam distinctio.</li>
-                                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas vitae eveniet pariatur deleniti eius, mollitia fugiat.</li>
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, id!</li>
-                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam sequi voluptatibus hic optio provident!</li>
-                            </ul>
-                           </font>
-                        </td>
-                        <td valign="top">
-                            <img src="images/Achievements.png" alt="Achievements"  width="90%">
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
+  <!-- Footer -->
+  <footer>
+    <div>
+      <p>
+        <span class="fa fa-facebook-square"></span> Facebook |
+        <span class="fa fa-twitter-square"></span> Twitter |
+        <span class="fa fa-instagram"></span> Instagram |
+        <span class="fa fa-linkedin-square"></span> LinkedIn
+      </p>
+      <p>
+        <span class="fa fa-youtube-square"></span> YouTube |
+        <span class="fa fa-rss-square"></span> Blog |
+        <span class="fa fa-envelope-o"></span> Email |
+        <span class="fa fa-globe"></span> Website
+      </p>
+      <p><a href="#home"><span class="fa fa-arrow-circle-up"></span> Back to Top</a></p>
+    </div>
+  </footer>
 
-        </tr>
-
-
-    </table>
-    <!--End Achievements-->
-
-    <!--Start Contact-->
-    <table id="contact" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#292929">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <!-- Heading Start-->
-                    <tr>
-                        <td height="180" align="center" valign="middle" colspan="1">
-                                <font face="arial" color="#f3971b" size="6">
-                                     Contact
-                                </font>
-                                <hr width="70" color="#f3971b">
-                        
-                        </td>
-                    </tr>
-                    <!--Heading End-->
-                    <tr>
-                        <td align="center" valign="top">
-                           <table border="0" width="50%" cellpadding="15" cellspacing="0" align="center" bgcolor="#353535">
-                               <tr>
-                                   <td width="30%">
-                                       <font face="arial" size="4" color="#ffffff">
-                                           Name
-                                       </font>
-                                   </td>
-                                   <td width="70%">
-                                    <font face="arial" size="4" color="#ffffff">
-                                        <input type="text" size="40">
-                                    </font>
-                                    </td>
-                               </tr>
-                               <tr>
-                                <td width="30%">
-                                    <font face="arial" size="4" color="#ffffff">
-                                        Email
-                                    </font>
-                                </td>
-                                <td width="70%">
-                                 <font face="arial" size="4" color="#ffffff">
-                                     <input type="text" size="40">
-                                 </font>
-                                 </td>
-                            </tr>
-                            <tr>
-                                <td width="30%">
-                                    <font face="arial" size="4" color="#ffffff">
-                                        Message
-                                    </font>
-                                </td>
-                                <td width="70%">
-                                 <font face="arial" size="4" color="#ffffff">
-                                     <textarea rows="5" cols="42"></textarea>
-                                 </font>
-                                 </td>
-                            </tr>
-                            <tr>
-                                <td width="30%">
-                                   &nbsp;
-                                </td>
-                                <td width="70%">
-                                    <button type="Submit">
-                                        <font face="arial" size="4" color="#292929">
-                                             Submit
-                                        </font>
-                                </button>
-                                 </td>
-                            </tr>
-                           </table>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-
-        </tr>
-
-
-    </table>
-    <!--End Contact-->
-
-    <!--Start Footer-->
-    <table id="header" border="1" width="100%" cellpadding="0" cellspacing="0" bgcolor="#353535">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                   
-                    <tr>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-facebook-square" aria-hidden="true"></span>
-                                Facebook
-                            </font>
-                            
-                        </td>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-twitter-square" aria-hidden="true"></span>
-                                Twitter
-                            </font>
-                            
-                        </td>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-instagram" aria-hidden="true"></span>
-                                Instagram
-                            </font>
-                            
-                        </td>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-linkedin-square" aria-hidden="true"></span>
-                                Linkedin
-                            </font>
-                            
-                        </td>
-                        <td rowspan="2">
-                            <font face="arial" color="#ffffff" size="5">
-                                <span class="fa fa-arrow-circle-up" aria-hidden="true"></span>
-                             <a href="#header">
-                                <font face="arial" color="#ffffff" size="5">
-                                    Top
-                                </font>
-                                
-                            </a>
-                            </font>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-youtube-square" aria-hidden="true"></span>
-                                YouTube
-                            </font>
-                            
-                        </td>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-rss-square" aria-hidden="true"></span>
-                                Blog
-                            </font>
-                            
-                        </td>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                                Email
-                            </font>
-                            
-                        </td>
-                        <td width="25%" valign="top">
-                            <font face="arial" color="#f3971b" size="5">
-                                <span class="fa fa-globe" aria-hidden="true"></span>
-                                Website
-                            </font>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-
-        </tr>
-
-
-    </table>
-    <!--End Footer-->
 </body>
 </html>
