@@ -2,260 +2,241 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Project - Saurabh Shukla</title>
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Shukla | Freelance Programmer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Scroll Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p+1YJ3zOqGzT9NAK1xjl1n4+svf4L5JjGfYIh7+ZbxG5Q5oFVEW3NnQ/5vRGY59HgMP1FjQ5FhhmDk3c7xK3ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
-    header, section, footer {
-      width: 100%;
-    }
-    nav {
-      background-color: #f3971b;
-    }
-    nav table {
-      width: 85%;
-      margin: auto;
-    }
-    nav a {
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 18px;
-      margin: 0 10px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .home, .about, .services, .testimonial, .achievements, .contact {
-      padding: 50px 0;
-    }
-    .home {
-      background-color: #292929;
-      text-align: center;
-      color: white;
-    }
-    .about, .testimonial, .contact {
-      background-color: #292929;
-      color: white;
-    }
-    .services, .achievements {
-      background-color: #c2c0c3;
-      color: #292929;
-    }
-    hr {
-      width: 70px;
-      border: 2px solid;
-    }
-    .services img, .about img, .achievements img {
-      width: 90%;
-      border-radius: 10px;
-    }
-    .services td, .testimonial td {
-      vertical-align: top;
-    }
-    .testimonial h3 {
-      margin: 10px 0;
-    }
-    footer {
-      background-color: #353535;
-      color: #f3971b;
-      text-align: center;
-      padding: 30px 0;
-    }
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    input[type="text"], textarea {
-      width: 90%;
-      padding: 8px;
-      margin: 5px 0;
-      background-color: #555;
-      color: white;
-      border: 1px solid #888;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #f3971b;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #292929;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #ffae42;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-
-<body>
-
-  <!-- Header -->
-  <header>
-    <nav>
-      <table cellpadding="15" cellspacing="0">
-        <tr>
-          <td><span class="fa fa-user-circle"></span> <strong>Saurabh Shukla</strong></td>
-          <td align="right" colspan="7">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#testimonial">Testimonials</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
-          </td>
-        </tr>
-      </table>
-    </nav>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-orange-500 text-white fixed w-full z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="#home" class="text-2xl font-extrabold flex items-center">
+        <i class="fas fa-user-circle mr-2 text-3xl"></i>
+        <span>Saurabh Shukla</span>
+      </a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-gray-200 transition">Home</a>
+        <a href="#about" class="hover:text-gray-200 transition">About</a>
+        <a href="#services" class="hover:text-gray-200 transition">Services</a>
+        <a href="#testimonials" class="hover:text-gray-200 transition">Testimonials</a>
+        <a href="#achievements" class="hover:text-gray-200 transition">Achievements</a>
+        <a href="#contact" class="hover:text-gray-200 transition">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <i class="fas fa-bars fa-2x"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="menu" class="hidden bg-orange-600 md:hidden">
+      <div class="px-4 pt-2 pb-4 space-y-1">
+        <a href="#home" class="block px-3 py-2 rounded hover:bg-orange-700 transition">Home</a>
+        <a href="#about" class="block px-3 py-2 rounded hover:bg-orange-700 transition">About</a>
+        <a href="#services" class="block px-3 py-2 rounded hover:bg-orange-700 transition">Services</a>
+        <a href="#testimonials" class="block px-3 py-2 rounded hover:bg-orange-700 transition">Testimonials</a>
+        <a href="#achievements" class="block px-3 py-2 rounded hover:bg-orange-700 transition">Achievements</a>
+        <a href="#contact" class="block px-3 py-2 rounded hover:bg-orange-700 transition">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <!-- Home -->
-  <section id="home" class="home">
-    <h3>Hi, I'm Saurabh Shukla</h3>
-    <h2 style="color: #f3971b;">Freelance Programmer</h2>
-  </section>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-gray-900 via-orange-700 to-gray-900 text-white py-32">
+      <div class="absolute inset-0 opacity-20 bg-[url('https://source.unsplash.com/1600x900/?coding,tech')] bg-cover"></div>
+      <div class="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <h1 class="text-6xl md:text-7xl font-extrabold mb-6">Hi, I'm Saurabh Shukla</h1>
+        <p class="text-2xl md:text-3xl text-orange-300 mb-8">Freelance Programmer</p>
+        <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition">
+          Hire Me <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <table width="85%" align="center" cellpadding="15" cellspacing="0">
-      <tr>
-        <td colspan="2" align="center">
-          <h2 style="color: #f3971b;">About Me</h2>
-          <hr color="#f3971b">
-        </td>
-      </tr>
-      <tr>
-        <td width="40%">
-          <img src="images/me1.png" alt="Saurabh Shukla">
-        </td>
-        <td width="60%">
-          <h3>I am a passionate Programmer</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium ea consequuntur nemo fugiat consequatur a ducimus amet fugit cupiditate quos placeat perferendis maiores explicabo voluptates...</p>
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <table width="85%" align="center" cellpadding="15" cellspacing="0">
-      <tr>
-        <td colspan="3" align="center">
-          <h2>Services</h2>
-          <hr color="#292929">
-        </td>
-      </tr>
-      <tr>
-        <td><a href="service1.html"><img src="images/service1.png" alt="Service 1"></a></td>
-        <td><a href="service2.html"><img src="images/service2.png" alt="Service 2"></a></td>
-        <td><a href="service3.html"><img src="images/service3.png" alt="Service 3"></a></td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonial" class="testimonial">
-    <table width="85%" align="center" cellpadding="15" cellspacing="0">
-      <tr>
-        <td colspan="3" align="center">
-          <h2 style="color: #f3971b;">Testimonials</h2>
-          <hr color="#f3971b">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h3 align="center">Akash Gupta</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias...</p>
-        </td>
-        <td>
-          <h3 align="center">Akash Gupta</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias...</p>
-        </td>
-        <td>
-          <h3 align="center">Akash Gupta</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium ex aperiam quas dolor molestias...</p>
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- Achievements -->
-  <section id="achievements" class="achievements">
-    <table width="85%" align="center" cellpadding="15" cellspacing="0">
-      <tr>
-        <td colspan="2" align="center">
-          <h2>Achievements</h2>
-          <hr color="#292929">
-        </td>
-      </tr>
-      <tr>
-        <td width="66%">
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            I'm a dedicated programmer specializing in modern web technologies, UI/UX design, and scalable architectures. With over 5 years of experience, I deliver pixel-perfect, performant solutions.
+          </p>
+          <ul class="space-y-2 text-gray-600">
+            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i>Full-stack web development</li>
+            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i>Responsive and mobile-first design</li>
+            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i>RESTful APIs & microservices</li>
+            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i>Performance optimization</li>
           </ul>
-        </td>
-        <td>
-          <img src="images/Achievements.png" alt="Achievements">
-        </td>
-      </tr>
-    </table>
-  </section>
+        </div>
+        <div class="flex justify-center" data-aos="fade-left">
+          <img src="images/me1.png" alt="Saurabh Shukla" class="rounded-2xl shadow-2xl w-full max-w-sm" />
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <table width="85%" align="center" cellpadding="15" cellspacing="0">
-      <tr>
-        <td align="center">
-          <h2 style="color: #f3971b;">Contact</h2>
-          <hr color="#f3971b">
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required><br>
-            <input type="text" name="email" placeholder="Your Email" required><br>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
-            <button type="submit">Submit</button>
-          </form>
-        </td>
-      </tr>
-    </table>
-  </section>
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Services</h2>
+        <p class="text-lg text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Tailored solutions to elevate your digital presence</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="zoom-in">
+            <div class="text-5xl text-orange-500 mb-4"><i class="fas fa-code"></i></div>
+            <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
+            <p class="text-gray-600">Crafting fast, responsive websites with the latest frameworks and best practices.</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="text-5xl text-orange-500 mb-4"><i class="fas fa-paint-brush"></i></div>
+            <h3 class="text-2xl font-semibold mb-2">UI/UX Design</h3>
+            <p class="text-gray-600">Designing intuitive interfaces focused on user engagement and conversions.</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
+            <div class="text-5xl text-orange-500 mb-4"><i class="fas fa-lightbulb"></i></div>
+            <h3 class="text-2xl font-semibold mb-2">Consultation</h3>
+            <p class="text-gray-600">Strategic guidance from planning to execution for your tech projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-12" data-aos="fade-up">Testimonials</h2>
+        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide bg-gray-50 p-10 rounded-2xl shadow-lg flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Akash Gupta" class="w-20 h-20 rounded-full mb-4" />
+              <div class="flex mb-4">
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star-half-alt text-orange-500"></i>
+              </div>
+              <p class="text-gray-700 italic mb-4">"Exceptional quality and timely delivery!"</p>
+              <h4 class="text-gray-900 font-semibold">— Akash Gupta</h4>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide bg-gray-50 p-10 rounded-2xl shadow-lg flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Riya Singh" class="w-20 h-20 rounded-full mb-4" />
+              <div class="flex mb-4">
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="far fa-star text-gray-400"></i>
+              </div>
+              <p class="text-gray-700 italic mb-4">"Professional, creative, and reliable."</p>
+              <h4 class="text-gray-900 font-semibold">— Riya Singh</h4>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide bg-gray-50 p-10 rounded-2xl shadow-lg flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Priya Patel" class="w-20 h-20 rounded-full mb-4" />
+              <div class="flex mb-4">
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+              </div>
+              <p class="text-gray-700 italic mb-4">"Truly transformed our online presence."</p>
+              <h4 class="text-gray-900 font-semibold">— Priya Patel</h4>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Achievements</h2>
+          <ul class="space-y-4 text-gray-600 list-disc list-inside">
+            <li>Completed 50+ full-stack projects for global clients</li>
+            <li>AWS Certified Solutions Architect – Associate</li>
+            <li>Speaker at International Web Dev Conference 2024</li>
+            <li>Mentored 100+ aspiring developers through workshops</li>
+          </ul>
+        </div>
+        <div class="flex justify-center" data-aos="fade-left">
+          <img src="images/Achievements.png" alt="Achievements" class="rounded-2xl shadow-2xl w-full max-w-sm" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+      <div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8 bg-gray-800 text-white p-12 rounded-3xl shadow-2xl" data-aos="zoom-in">
+        <h2 class="text-4xl font-bold mb-8 text-center">Let's Connect</h2>
+        <form action="#" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+            <input id="name" type="text" class="w-full p-4 rounded-lg bg-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Your Name">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+            <input id="email" type="email" class="w-full p-4 rounded-lg bg-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+            <textarea id="message" rows="6" class="w-full p-4 rounded-lg bg-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Your message..."></textarea>
+          
+
+  
+          </div>
+          <button type="submit" class="w-full py-4 bg-orange-500 rounded-xl font-semibold hover:bg-orange-600 transition shadow-lg">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div>
-      <p>
-        <span class="fa fa-facebook-square"></span> Facebook |
-        <span class="fa fa-twitter-square"></span> Twitter |
-        <span class="fa fa-instagram"></span> Instagram |
-        <span class="fa fa-linkedin-square"></span> LinkedIn
-      </p>
-      <p>
-        <span class="fa fa-youtube-square"></span> YouTube |
-        <span class="fa fa-rss-square"></span> Blog |
-        <span class="fa fa-envelope-o"></span> Email |
-        <span class="fa fa-globe"></span> Website
-      </p>
-      <p><a href="#home"><span class="fa fa-arrow-circle-up"></span> Back to Top</a></p>
+  <footer class="bg-gray-800 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="flex justify-center space-x-6 text-xl">
+        <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="text-sm">&copy; 2025 <span class="font-semibold">Saurabh Shukla</span>. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+    // Initialize Swiper for testimonials
+    new Swiper('.mySwiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      autoplay: { delay: 5000 },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: { 768: { slidesPerView: 2 } }
+    });
+  </script>
 </body>
 </html>
